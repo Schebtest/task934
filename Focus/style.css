@@ -1,0 +1,33 @@
+/* общие настройки */
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+textarea:focus {
+	outline: none;
+	border: none;
+	border-bottom: 3px solid #563939;
+}
+
+label {
+	font-size: 1em;
+	font-style: italic;
+}
+
+/* настройки стилизации невалидных полей */
+
+input[required]:focus:invalid {
+	border: 0;
+	border-bottom: 3px solid #ff0000;
+	outline: none;
+}
+
+.error {
+	display: none;
+	font-size: 0.8em;
+	color: red;
+}
