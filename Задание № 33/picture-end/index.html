@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тег Picture и адаптивность</title>
+</head>
+<body>
+    <h1>Откройте режим разработчика и меняйте разрешение экрана.</h1>
+    <h1>Следите за сменой изображений в зависимости от разрешения и ориентации экрана!</h1>
+
+    <picture>
+
+       <source media="(orientation: landscape)"
+
+           srcset=" land-small-chameleon-image.jpg 200w,
+                    land-medium-chameleon-image.jpg 600w,
+                    land-large-chameleon-image.jpg 1000w"
+
+           sizes="  (min-width: 1000px) 1000px,
+                    (min-width: 600px) 600px,
+                    200px"
+        >
+
+       <source media="(orientation: portrait)"
+
+           srcset=" port-small-chameleon-image.jpg 200w,
+                    port-medium-chameleon-image.jpg 600w,
+                    port-large-chameleon-image.jpg 800w"
+
+           sizes="  (min-width: 1000px) 800px,
+                    (min-width: 600px) 600px,
+                    200px"
+        >
+
+        <img src="land-medium-chameleon-image.jpg" alt="chameleon">
+
+    </picture>
+</body>
+</html>
+
